@@ -13,9 +13,9 @@
       { "name": "typescript-plugin-css-modules" },
       ["@babel/plugin-proposal-class-properties"]
     ],
-    "assumptions": {
-      "setPublicClassFields": false,
-    }
+//    "assumptions": {
+//      "setPublicClassFields": false,
+//    }
   },
   "include": [
     "./src",
