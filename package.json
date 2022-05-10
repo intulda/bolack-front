@@ -1,0 +1,77 @@
+{
+  "name": "bolack-front",
+  "version": "1.0.0",
+  "main": "./public/electron.js",
+  "homepage": "https://github.com/intulda/bolack-front#readme",
+  "build": {
+    "productName": "electron",
+    "asar": true,
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "src/**/*"
+    ]
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --progress",
+    "build": "webpack --progress",
+    "bundle": "webpack --mode development",
+    "start": "concurrently \"npm run dev\" \"npm run electron\"",
+    "electron": "wait-on http://localhost:3000 && electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intulda/bolack-front.git"
+  },
+  "author": "vex.kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/intulda/bolack-front/issues"
+  },
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "concurrently": "^7.0.0",
+    "css-loader": "^6.7.1",
+    "electron-builder": "^22.14.13",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.2",
+    "typescript-plugin-css-modules": "^2.8.0",
+    "wait-on": "^6.0.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@babel/plugin-transform-typescript": "^7.16.8",
+    "@babel/runtime": "^7.17.2",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@types/react-responsive": "^8.0.5",
+    "antd": "^4.19.1",
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "electron": "^18.0.1",
+    "electron-is-dev": "^2.0.0",
+    "mobx": "^6.5.0",
+    "node-sass": "^7.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-responsive": "^9.0.0-beta.6",
+    "react-router-dom": "^6.2.2",
+    "sass": "^1.49.9"
+  }
+}
